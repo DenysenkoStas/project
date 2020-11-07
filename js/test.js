@@ -1,41 +1,32 @@
 "use strict";
 
-let num = 20;
+const arr = [1, 2, 4];
+console.log(arr.length);
 
-function showFirstMessage(text) {
-    console.log(text);
-    console.log(num);
+const str = "test";
+// console.log(str.length);
+// console.log(str[2]);
+// console.log(str.toUpperCase());
+console.log(str.toLocaleLowerCase());
+console.log(str);
+
+let fruit = "Some fruit";
+let search = "fruit";
+
+if (fruit.indexOf(search) != -1) {
+    console.log(`Ваша слово начинается с ${fruit.indexOf(search)} символа`);
+} else {
+    console.log("Вашего слова нет в предложении");
 }
 
-showFirstMessage("Hello World!");
-console.log(num);
+const logg = "Hello World!";
+console.log(logg.slice(6, 11));
+console.log(logg.substring(6, 11));
+console.log(logg.substr(6, 6));
 
-// function calc(a, b) {
-//     return (a + b);
-// }
+const num = 12.2;
+console.log(Math.round(num));
 
-// console.log(calc(4, 3));
-// console.log(calc(5, 6));
-// console.log(calc(10, 6));
-
-function ret() {
-    let num = 50;
-    return num;
-}
-
-const anotherNum = ret();
-console.log(anotherNum);
-
-const logger = function () {
-    console.log("Hello");
-};
-
-logger();
-
-// const calc = a => ++a;
-
-const calc = (a, b) => { 
-    return a + b;
-};
-
-console.log(calc(1, 2));
+const test = "12.2px";
+console.log(parseInt(test));
+console.log(parseFloat(test));
