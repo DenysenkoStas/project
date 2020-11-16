@@ -1,22 +1,49 @@
 "use strict";
 
-function hello() {
-    console.log("Hello World");
+// To String
+// 1)
+console.log(typeof(String(null)));
+console.log(typeof(String(4)));
+
+// 2)
+console.log(typeof(5 + ""));
+console.log(typeof(null + ""));
+
+const num = 5;
+console.log("https://vk.com/catalog/" + num);
+
+const fontSize = 26 + "px";
+
+// To Number
+// 1)
+console.log(typeof(Number("4")));
+
+// 2)
+console.log(typeof(+"5"));
+
+// 3)
+console.log(typeof(parseInt("15px", 10)));
+
+let answ = +prompt("Hello", "");
+
+// To Boolean
+// 0, "", null, undefined, NaN - будут превращаться в false
+
+// 1)
+let switcher = null;
+
+if (switcher) {
+    console.log("Working...");
 }
 
-hello();
+switcher = 1;
 
-function hi() {
-    console.log("Say hi!");
+if (switcher) {
+    console.log("Working...");
 }
 
-hi();
+// 2)
+console.log(typeof(Boolean("4")));
 
-const arr = [1, 14, 4, 30, 54],
-      sorted = arr.sort(compareNum);
-
-function compareNum(a, b) {
-    return a - b;
-}
-
-console.log(sorted);
+// 3)
+console.log(typeof(!!"44444"));
