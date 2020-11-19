@@ -1,49 +1,32 @@
 "use strict";
 
-// To String
-// 1)
-console.log(typeof(String(null)));
-console.log(typeof(String(4)));
+let x = 5;
+console.log(x++); // 5
 
-// 2)
-console.log(typeof(5 + ""));
-console.log(typeof(null + ""));
+console.log([] + false - null + true); // "NaN"
 
-const num = 5;
-console.log("https://vk.com/catalog/" + num);
+let y = 1;
+let x = y = 2;
+console.log(x); // 2
 
-const fontSize = 26 + "px";
+console.log([] + 1 + 2); // "12"
 
-// To Number
-// 1)
-console.log(typeof(Number("4")));
+console.log("1" [0]); // "1"
 
-// 2)
-console.log(typeof(+"5"));
+console.log(2 && 1 && null && 0 && undefined); // null
+// И (&&) запинается на лжи (false)
+// ИЛИ (||) запинается на правде (true)
 
-// 3)
-console.log(typeof(parseInt("15px", 10)));
+console.log(!!( 1 && 2 ) == (1 && 2)); // false
 
-let answ = +prompt("Hello", "");
+console.log(null || 2 && 3 || 4); // 3
 
-// To Boolean
-// 0, "", null, undefined, NaN - будут превращаться в false
+const a = [1, 2, 3],
+      b = [1, 2, 3];
+console.log (a == b); // false
 
-// 1)
-let switcher = null;
+console.log(+"Infinity"); // Infinity - числоввой тип
 
-if (switcher) {
-    console.log("Working...");
-}
+console.log("Ёжик" > "яблоко"); // false
 
-switcher = 1;
-
-if (switcher) {
-    console.log("Working...");
-}
-
-// 2)
-console.log(typeof(Boolean("4")));
-
-// 3)
-console.log(typeof(!!"44444"));
+console.log(0 || "" || 2 || undefined || true || falsе); // 2
