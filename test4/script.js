@@ -5,7 +5,7 @@
 // touchleave
 // touchcancel
 
-window.addEventListener("DOMContentLoader", () => {
+window.addEventListener("DOMContentLoaded", () => {
     const box = document.querySelector(".box");
 
     box.addEventListener("touchstart", (e) => {
